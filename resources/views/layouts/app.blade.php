@@ -45,7 +45,7 @@
                                 <a class="nav-link" href="{{ route('login') }}">Experience Tracker</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Dice Roller</a>
+                                <a class="nav-link" href="{{ route('diceroller') }}">Dice Roller</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">Settings</a>
@@ -95,6 +95,11 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
+            <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+            </div>
+        </div>
     </div>
 </body>
 </html>

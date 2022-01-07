@@ -17,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/diceroller', function () {
+    return view('diceroller');
+});
+
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/diceroller', [App\Http\Controllers\DiceRollerController::class, 'index'])->name('diceroller');
